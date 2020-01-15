@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("https://i.pinimg.com/originals/c1/70/6c/c1706cc9d5036470a7d9f3393d561b84.jpg");
+        background-size: cover;
+        font-family: "Lato", sans-serif;
+      }
+
+      form,
+      label,
+      select,
+      #name,
+      #email,
+      button {
+        display: block;
+      }
+
+      form {
+        max-width: 690px;
+        height: 900px;
+        margin: auto;
+        background: rgba(0, 0, 51, 0.6);
+        padding: 30px 0 0 40px;
+        color: #ffc0cb;
+        font-size: 20px;
+        border-style: 4px solid rgba(0, 0, 51, 0.9);
+        border-radius: 15px;
+      }
+
+      label {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      #imrpove input[type="checkbox"] {
+        padding-top: 50px;
+      }
+
+      h1,
+      p {
+        text-align: center;
+        color: #ffc0cb;
+        font-weight: 900;
+      }
+
+      p {
+        font-style: italic;
+        font-size: 20px;
+      }
+
+      #name,
+      #email,
+      #number,
+      #dropdown {
+        width: 650px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 4px;
+      }
+
+      #comments {
+        width: 650px;
+        border: 1px solid white;
+        border-radius: 3px;
+        margin-bottom: 40px;
+      }
+
+      input::placeholder {
+        padding-left: 10px;
+      }
+
+      textarea::placeholder {
+        padding-left: 10px;
+        padding-top: 5px;
+      }
+
+      button {
+        width: 250px;
+        height: 40px;
+        background: #5f9ea0;
+        border: 1px solid #5f9ea0;
+        border-radius: 3px;
+        color: #ffc0cb;
+        font-weight: 700;
+        margin: auto;
+        font-size: 20px;
+        cursor: crosshair;
+      }
+
+      button:hover {
+        background: lightseagreen;
+        border: 1px solid lightseagreen;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a survey</p>
+    <form action="GET" id="survey-form">
+      <label for="name" id="name-label">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter your name"
+        required
+      />
+      <label for="email" id="email-label">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      />
+      <label for="Age" id="number-label">Age</label>
+      <input
+        type="number"
+        name="age"
+        id="number"
+        min="1"
+        max="100"
+        placeholder="Age"
+      />
+      <label for="role">What season do you feel you best perform in?</label>
+      <select name="role" id="dropdown">
+        <option value="student">Winter</option>
+        <option value="employed">Spring</option>
+        <option value="unemployed">Summer</option>
+        <option value="none" selected>Fall</option>
+      </select>
+      <label for="recommend"
+        >Would you be able to complete this task on Mars?</label
+      >
+      <input
+        type="radio"
+        name="user-recommend"
+        id="yeuser-recommends"
+        value="yes"
+      />
+      Definitely
+      <input
+        type="radio"
+        name="user-recommend"
+        id="user-recommend"
+        value="maybe"
+      />
+      Maybe
+      <input
+        type="radio"
+        name="user-recommend"
+        id="user-recommend"
+        value="notsure"
+      />
+      Not sure<br />
+      <label for="improve">What would you like to do today?</label>
+      <input
+        type="checkbox"
+        name="improve"
+        id="improve"
+        value="Front-end Projects"
+      />Go back to bed<br />
+      <input
+        type="checkbox"
+        name="improve"
+        id="improve"
+        value="Back-end Projects"
+      />Clean the house<br />
+      <input
+        type="checkbox"
+        name="improve"
+        id="improve"
+        value="Data Visualization"
+      />Watch episodes of The Office<br />
+      <input
+        type="checkbox"
+        name="improve"
+        id="improve"
+        value="Open Source Community"
+      />Rob a bank<br />
+      <input type="checkbox" name="improve" id="improve" value="Forum" />Not
+      this<br />
+      <input
+        type="checkbox"
+        name="improve"
+        id="improve"
+        value="Additional Courses"
+      />Last box
+      <label for="comments">Any comments or suggestions?</label>
+      <textarea
+        name="comments"
+        id="comments"
+        cols="80"
+        rows="10"
+        placeholder="Enter your comments here..."
+      ></textarea>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
